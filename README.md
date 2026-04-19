@@ -1,54 +1,3 @@
-# Open Design and Technology  
-## Final Project README
-
-> **Project Weight:** 70%  
-> **Team Size:** 2 students  
-> **Project Duration:** 4 weeks  
-> **Class Time Available:** 6 hours per class  
-> **Total Time Available:** 48 effort-hours per team  
-> **Project Type:** Playful, interactive, technology-based experience
-
----
-
-# Before you begin
-
-## Fork and rename this repository
-After forking this repository, rename it using the format:
-
-`ODT-2026-TeamName`
-
-### Example
-`ODT-2026-PixelWizards`
-
-Do not keep the default repository name.
-
----
-
-# How to use this README
-
-This file is your team’s **working project document**.
-
-You must keep updating it throughout the 4-week build period.  
-By the final review, this README should clearly show:
-- your idea,
-- your planning,
-- your design decisions,
-- your technical process,
-- your build progress,
-- your testing,
-- your failures and changes,
-- your final outcome.
-
-## Rules
-- Fill every section.
-- Do not delete headings.
-- If something does not apply, write `Not applicable` and explain why.
-- Add images, screenshots, sketches, links, and videos wherever useful.
-- Update task status and weekly logs regularly.
-- Use this file as evidence of process, not only as a final report.
-
----
-
 # 1. Team Identity
 
 ## 1.1 Studio / Group Name
@@ -58,14 +7,14 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `[Student 1]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `[Student 2]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| Mishka Bhandary | Coding | Electronics & Troubleshooting | Circuit connections, breadboard wiring, debugging |
+| Devina Jha | Fabrication & Mechanics | Troubleshooting | Physical build, ideation sketches, repository setup |
 
 ## 1.3 Project Title
-`[Enter the title of your project]`
+A Capacitive Touch Rhythm Controller Built on ESP32 Hardware with Real-Time Browser Game Integration
 
 ## 1.4 One-Line Pitch
-`[Describe your project in one sentence]`
+We reverse-engineered the concept of a commercial game controller using an ESP32 microcontroller, raw jumper wire, and kitchen aluminum foil to build a capacitive touch input system that plays Magic Piano Tiles in real time with zero lag and maximum chaos.
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -75,7 +24,10 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`[Write here]`
+`What our project is: A physical game controller built from an ESP32 microcontroller and aluminum foil pads that lets you play Magic Piano Tiles by tapping real surfaces instead of a screen or keyboard.
+What kind of playful experience it creates: It turns a fast-paced rhythm game into a full-body, hands-on experience where you are literally slapping foil to hit notes, which is chaotic, competitive, and way more satisfying than clicking a mouse.
+What makes it fun, curious, engaging, strange, satisfying, competitive, or delightful: Piano Tiles is one of those games that has no right to be as addictive as it is. It is pure reaction speed, and the second you miss a tile the whole run is over, which is infuriating in the best way possible. There is something deeply nostalgic about it too, almost everyone has played it at some point and has a score they are quietly proud of. Playing it on physical foil pads makes that frustration and satisfaction hit even harder because now your whole hand is in it, not just a fingertip on glass.
+What technologies are involved: ESP32 microcontroller with capacitive touch sensing, jumper wires, aluminum foil as conductors, Arduino-based firmware, and a browser running Magic Piano Tiles as the game interface.`
 
 ---
 
@@ -101,7 +53,9 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`[Write here]`
+`What is the experience: We built a physical controller from scratch and hooked it up to a game that already has people in a chokehold. You are not tapping a screen anymore, you are hitting actual foil pads that we wired, coded, and calibrated ourselves, and the game has no idea the difference.
+What do you want the player or participant to feel: We want them to feel the exact same spiral we felt building it, that mix of frustration when something is not working and then the rush when it suddenly clicks. Piano Tiles already does that on its own but now there is a physical thing in front of you and your whole hand is involved. We want them to panic, mess up, laugh about it, and immediately want another go.
+Why would someone want to try it again: Piano Tiles does not let you walk away clean. You will always miss a tile and need to prove to yourself you can do better. But with our controller there is an extra layer because you are also getting used to the pads, figuring out your hand placement, and quietly trying to outlast whoever played before you. It turns into a competition without anyone officially declaring one.`
 
 ## 2.3 Design Persona
 Complete the sentence below:
