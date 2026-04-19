@@ -1,0 +1,121 @@
+from ble_keyboard import BLEKeyboard
+from machine import Pin, TouchPad
+import struct
+import time
+
+kb = BLEKeyboard("ESP32")
+
+# Touch pins
+touch_f = TouchPad(Pin(15))
+touch_g = TouchPad(Pin(13))
+touch_h = TouchPad(Pin(12))
+touch_j = TouchPad(Pin(14))
+
+# Key mappings
+KEY_F = 0x09
+KEY_G = 0x0A
+KEY_H = 0x0B
+KEY_J = 0x0D
+
+keys = {
+    'f': KEY_F,
+    'g': KEY_G,
+    'h': KEY_H,
+    'j': KEY_J,
+}
+
+touch_pads = {
+    'f': touch_f,
+    'g': touch_g,
+    'h': touch_h,
+    'j': touch_j,
+}
+
+# State tracking
+held = {k: False for k in keys}
+last_touch_time = {k: 0 for k in keys}
+
+# Tunable parameters
+THRESHOLD_OFFSET = 100      # sensitivity (increase if too sensitive)
+DEBOUNCE_MS = 120          # increase for foot stepping stability
+
+# ---------- Helper Functions ----------
+
+def calibrate(touch, samples=50):
+    total = 0
+    for _ in range(samples):
+        total += touch.read()
+        time.sleep_ms(10)
+    return total // samples
+
+def smooth_read(touch, samples=5):
+    return sum(touch.read() for _ in range(samples)) // samples
+
+def send_keys(active_keys):
+    keycodes = [0] * 6
+    i = 0
+    for k in active_keys:
+        if i < 6:
+            keycodes[i] = keys[k]
+            i += 1
+    kb._send(struct.pack("8B", 0, 0, *keycodes))
+
+# ---------- Calibration ----------
+
+print("Calibrating... Do NOT touch sensors")
+baseline = {k: calibrate(touch_pads[k]) for k in touch_pads}
+print("Baseline values:", baseline)
+
+print("Waiting for Bluetooth connection...")
+connection_ready = False
+
+# ---------- Main Loop ----------
+
+while True:
+    if kb.is_connected():
+        if not connection_ready:
+            print("Connected! Stabilizing...")
+            time.sleep(2)
+            print("Ready!")
+            connection_ready = True
+
+        try:
+            now = time.ticks_ms()
+
+            touches = {}
+
+            # Read + detect touches
+            for k in touch_pads:
+                val = smooth_read(touch_pads[k])
+                threshold = baseline[k] - THRESHOLD_OFFSET
+                touches[k] = val < threshold
+
+            active_keys = []
+
+            # Debounce + state tracking
+            for pad, touched in touches.items():
+                if touched and not held[pad]:
+                    if time.ticks_diff(now, last_touch_time[pad]) > DEBOUNCE_MS:
+                        print(f"{pad.upper()} DOWN")
+                        held[pad] = True
+                        last_touch_time[pad] = now
+
+                elif not touched and held[pad]:
+                    print(f"{pad.upper()} UP")
+                    held[pad] = False
+                    last_touch_time[pad] = now
+
+                if held[pad]:
+                    active_keys.append(pad)
+
+            # Send all active keys together
+            send_keys(active_keys)
+
+        except ValueError:
+            pass
+
+    else:
+        held = {k: False for k in held}
+        connection_ready = False
+
+    time.sleep_ms(20)
