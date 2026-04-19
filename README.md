@@ -24,8 +24,11 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`This project is a fully custom-built human-input device (HID) that hijacks a browser-based rhythm game using nothing but an ESP32, some wire, and aluminum foil. The ESP32 has built-in capacitive touch pins that detect when a conductive surface makes contact with a person. Each pin is wired to a strip of aluminum foil laid flat on the floor as a step pad. We built 4 columns to match the exact lane layout of Magic Piano Tiles, so when you step on a pad, the board picks up the change and fires the corresponding input to the game running in the browser. We had to manually tune the sensitivity on each pad to handle the force and contact area of a foot rather than a fingertip, filter out ghost triggers, and deal with the general chaos of conductive pads on the floor, which is a lot trickier than it sounds.
-The real challenge was making it consistent and fast enough to keep up with tiles at full speed. That meant writing tight polling loops, adding debounce logic to avoid double-inputs, and arranging the 4 pads in a layout that felt natural to actually play with your feet. The final result is something that looks unconventional but performs like a piece of real hardware engineering, which is exactly the point.`
+`This project is a fully custom-built human-input device (HID) that hijacks a browser-based rhythm game using nothing but an ESP32, some wire, and aluminum foil. The ESP32 has built-in capacitive touch pins that detect when a conductive surface makes contact with a person.` 
+
+`Each pin is wired to a strip of aluminum foil laid flat on the floor as a step pad. We built 4 columns to match the exact lane layout of Magic Piano Tiles, so when you step on a pad, the board picks up the change and fires the corresponding input to the game running in the browser. We had to manually tune the sensitivity on each pad to handle the force and contact area of a foot rather than a fingertip, filter out ghost triggers, and deal with the general chaos of conductive pads on the floor, which is a lot trickier than it sounds.`
+
+`The real challenge was making it consistent and fast enough to keep up with tiles at full speed. That meant writing tight polling loops, adding debounce logic to avoid double-inputs, and arranging the 4 pads in a layout that felt natural to actually play with your feet. The final result is something that looks unconventional but performs like a piece of real hardware engineering, which is exactly the point.`
 
 ---
 
@@ -85,7 +88,9 @@ List what inspired the project.
 What makes your project original?
 
 **Response:**  
-`Most people have played Piano Tiles on a phone screen. We pulled it off a screen entirely and rebuilt the input layer from scratch using an ESP32 and 4 aluminum foil pads laid out on the floor that you step on to play. There is no kit for what we made. We figured out the touch sensitivity thresholds for foot contact, solved the signal noise issues, and got it responsive enough to actually keep up with the game at full speed. The twist is that the controller looks unconventional but performs like something engineered, and the game it connects to is one people already have a history with, so the moment they step on the pads it feels both familiar and completely new.`
+`Most people have played Piano Tiles on a phone screen. We pulled it off a screen entirely and rebuilt the input layer from scratch using an ESP32 and 4 aluminum foil pads laid out on the floor that you step on to play. There is no kit for what we made. We figured out the touch sensitivity thresholds for foot contact, solved the signal noise issues, and got it responsive enough to actually keep up with the game at full speed.`
+
+`The twist is that the controller looks unconventional but performs like something engineered, and the game it connects to is one people already have a history with, so the moment they step on the pads it feels both familiar and completely new.`
 
 ---
 
@@ -144,24 +149,23 @@ If your project is a game, list the rules clearly.
 ## 5.1 Definition of “Playable”
 Your project will be considered complete only if these conditions are met.
 
-- [ ] `[Condition 1]`
-- [ ] `[Condition 2]`
-- [ ] `[Condition 3]`
-- [ ] `[Condition 4]`
-- [ ] `[Condition 5]`
+- [ ] `All 4 foil pads reliably detect a foot step and send the correct keystroke to the browser without false triggers or missed inputs`
+- [ ] `The game runs in the browser and responds to the ESP32 input in real time with no noticeable lag`
+- [ ] `A full round can be played from start to game over without the system crashing or disconnecting`
+- [ ] `The pads stay in place during play and do not shift or lose contact under the pressure of being stepped on`
+- [ ] `A new player can pick it up and understand how to play within the first 20 seconds without being explained anything`
 
 ## 5.2 Minimum Viable Version
 What is the smallest version of this project that still delivers the core experience?
 
 **Response:**  
-`[Write here]`
+`4 foil pads on the floor, wired to an ESP32, connected to a laptop running Magic Piano Tiles in a browser. Steps register as keystrokes and the game responds. That is the whole thing and it already works`
 
 ## 5.3 Stretch Features
 What features are nice to have but not essential?
 
-- `[Stretch feature 1]`
-- `[Stretch feature 2]`
-- `[Stretch feature 3]`
+- `A scoreboard that tracks and displays the top scores across multiple players during an exhibition`
+- `A custom enclosure or frame around the pads to make the mat look more polished and keep everything in place during heavy use]`
 
 ---
 
@@ -170,18 +174,27 @@ What features are nice to have but not essential?
 ## 6.1 Project Type
 Check all that apply.
 
-- [ ] Electronics-based
-- [ ] Mechanical
-- [ ] Sensor-based
-- [ ] App-connected
-- [ ] Motorized
-- [ ] Sound-based
-- [ ] Light-based
-- [ ] Screen/UI-based
-- [ ] Fabricated structure
-- [ ] Game logic based
-- [ ] Installation / tabletop experience
-- [ ] Other: `[Write here]`
+[✓] Electronics-based
+
+[✓] Mechanical
+
+[✓] Sensor-based
+
+[✓] App-connected
+
+[•] Motorized
+
+[•] Sound-based
+
+[•] Light-based
+
+[✓] Screen/UI-based
+
+[✓] Fabricated structure
+
+[✓] Game logic based
+
+[✓] Installation / tabletop experience
 
 ## 6.2 High-Level System Description
 Explain how the system works in simple terms.
@@ -200,10 +213,10 @@ Include:
 
 | System Part | Type | What It Does |
 |---|---|---|
-| `[Button / Sensor / Switch / App Input]` | Input | `[Describe]` |
-| `[ESP32 / Controller]` | Processing | `[Describe]` |
-| `[LED / Motor / Servo / Buzzer / Display]` | Output | `[Describe]` |
-| `[Mechanical Assembly]` | Physical Action | `[Describe]` |
+| `Aluminum foil pads (x4)` | Input | `Detects when a foot steps on the pad and sends the signal to the ESP32 via capacitive touch pins` |
+| `ESP32 / Controller` | Processing | `Reads the touch input from each pad, applies sensitivity thresholds and debounce logic, then fires the corresponding keystroke to the browser` |
+| `Browser / Magic Piano Tiles` | Output | `Receives the keystroke, registers the tile hit, and updates the game state on screen in real time` |
+| `4-column floor mat assembly` | Physical Action | `Player stands on the mat and steps on the pad matching the falling tile, driving the entire input chain with their foot` |
 
 ---
 
@@ -247,24 +260,35 @@ Add a sketch with labels showing:
 ## 8.1 Mechanical Features
 Check all that apply.
 
-- [ ] Gears
-- [ ] Pulleys
-- [ ] Belt drives
-- [ ] Linkages
-- [ ] Hinges
-- [ ] Shafts
-- [ ] Springs
-- [ ] Bearings
-- [ ] Wheels
-- [ ] Sliders
-- [ ] Levers
-- [ ] Not applicable
+[•] Gears
+
+[•] Pulleys
+
+[•] Belt drives
+
+[•] Linkages
+
+[•] Hinges
+
+[•] Shafts
+
+[•] Springs
+
+[•] Bearings
+
+[•] Wheels
+
+[•] Sliders
+
+[•] Levers
+
+[✓] Not applicable
 
 ## 8.2 Mechanical Description
 Describe the mechanism and what it is meant to do.
 
 **Response:**  
-`[Write here]`
+`There is no traditional mechanism in this project. The physical structure is 4 aluminum foil pads laid flat on the floor in a column layout. The only mechanical interaction is a foot pressing down onto a pad, which brings the foil into firm enough contact to be detected by the ESP32's capacitive touch pin. The construction is intentionally simple because the complexity lives in the electronics and firmware, not the physical assembly.`
 
 ## 8.3 Motion Planning
 If something moves, explain:
@@ -275,21 +299,21 @@ If something moves, explain:
 - what could go wrong.
 
 **Response:**  
-`[Write here]`
+`The only thing that moves is the player's foot coming down onto the pad. The foot pressing down causes the movement. The distance is just however far a natural step travels, a few centimeters at most. The speed depends entirely on how fast the player is reacting to the tiles, which at high game speeds gets very fast. What could go wrong is the pad sliding across the floor mid-game from repeated stepping, the foil bunching up and losing flat contact, or the wire pulling loose from the pad if a step lands on the connection point rather than the center of the foil.`
 
 ## 8.4 Simulation / CAD / Animation Before Making
 If your project includes mechanical motion, document the digital planning before fabrication.
 
 | Tool Used | File / Link | What Was Tested |
 |---|---|---|
-| `[Fusion 360 / Tinkercad / other]` | `[Link or screenshot]` | `[What did you validate?]` |
-| `[Tool]` | `[Link or screenshot]` | `[What did you validate?]` |
+| `Not Applicable` | `Not Applicable` | `Not Applicable` |
+| `Not Applicable` | `Not Applicable` | `Not Applicable` |
 
 ## 8.5 Changes After Digital Testing
 What changed after the CAD, animation, or simulation stage?
 
 **Response:**  
-`[Write here]`
+`Not Applicable`
 
 ---
 
@@ -299,15 +323,18 @@ What changed after the CAD, animation, or simulation stage?
 
 | Component | Quantity | Purpose |
 |---|---:|---|
-| `[ESP32]` | `1` | `[Main controller]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
+| `ESP32` | `1` | `Main controller` |
+| `Aluminum Foil Pads` | `4` | `Act as the conductive touch surface that detects when a foot steps on them` |
+| `Jumper Wires` | `8` | `Connect each foil pad to the corresponding capacitive touch pin on the ESP32` |
+| `USB Cable` | `1` | `Powers the ESP32 and maintains the serial connection to the laptop` |
+| `Laptop / Computer` | `4` | `Runs Thonny for firmware, hosts the browser running Magic Piano Tiles` |
+| `Breadboard` | `1` | `Organizes and stabilizes the wiring connections on the ESP32` |
 
 ## 9.2 Wiring Plan
 Describe the main electrical connections.
 
 **Response:**  
-`[Write here]`
+`Each aluminum foil pad is connected via a jumper wire to one of the ESP32's capacitive touch GPIO pins. There are 4 pads and 4 dedicated touch pins, one per column. All grounds are connected through the breadboard. The ESP32 is powered and communicates with the laptop via USB. The MicroPython firmware running in Thonny continuously polls each touch pin, checks the reading against a set threshold, and when a step is detected it sends the mapped keystroke to the browser.`
 
 ## 9.3 Circuit Diagram
 Insert a hand-drawn or software-made circuit diagram.
@@ -319,10 +346,10 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Question | Response |
 |---|---|
-| Power source | `[USB / battery / adapter / other]` |
-| Voltage required | `[Write here]` |
-| Current concerns | `[Write here]` |
-| Safety concerns | `[Write here]` |
+| Power source | `USB connected to laptop` |
+| Voltage required | `5V via USB` |
+| Current concerns | `Minimal, the ESP32 and capacitive touch pins draw very little current and the foil pads are passive conductors with no power running through them directly` |
+| Safety concerns | `No high voltage involved. The only risk is a loose wire pulling out mid-game which would cause a pad to stop responding, not cause any harm` |
 
 ---
 
@@ -332,8 +359,11 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Tool / Platform | Purpose |
 |---|---|
-| `[MicroPython / Arduino / MIT App Inventor / CAD tool / other]` | `[Purpose]` |
-| `[Tool]` | `[Purpose]` |
+| `Thonny IDE` | `Writing, uploading and debugging the MicroPython firmware on the ESP32` |
+| `MicroPython` | `The firmware language running on the ESP32 that handles touch detection, threshold logic and keystroke output` |
+| `Browser (Chrome / any)` | `Runs Magic Piano Tiles and receives the keystrokes fired by the ESP32` |
+| `Magic Piano Tiles (web)` | `The game itself, the target application the controller is built to play` |
+
 
 ## 10.2 Software Logic
 Describe what the code must do.
@@ -377,8 +407,8 @@ Suggested sequence:
 # 11. MIT App Inventor Plan
 
 ## 11.1 Is an app part of this project?
-- [ ] Yes
-- [ ] No
+[•] Yes
+[✓] No
 
 If yes, complete this section.
 
@@ -394,7 +424,7 @@ Examples:
 - displaying data.
 
 **Response:**  
-`[Write here]`
+`Not Applicable`
 
 ## 11.3 App Features
 
