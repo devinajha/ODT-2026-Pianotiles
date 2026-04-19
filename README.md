@@ -14,7 +14,7 @@
 `A Capacitive Touch Rhythm Controller Built on ESP32 Hardware with Real-Time Browser Game Integration`
 
 ## 1.4 One-Line Pitch
-`We reverse-engineered the concept of a commercial game controller using an ESP32 microcontroller, raw jumper wire, and kitchen aluminum foil to build a capacitive touch input system that plays Magic Piano Tiles in real time with zero lag and maximum chaos.`
+`We engineered a floor-based, 4-column capacitive touch controller using an ESP32 microcontroller and aluminum foil pads that you physically step on to play Magic Piano Tiles in real time, with zero lag and maximum chaos.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -24,13 +24,8 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`What our project is: A physical game controller built from an ESP32 microcontroller and aluminum foil pads that lets you play Magic Piano Tiles by tapping real surfaces instead of a screen or keyboard.`
-
-`What kind of playful experience it creates: It turns a fast-paced rhythm game into a full-body, hands-on experience where you are literally slapping foil to hit notes, which is chaotic, competitive, and way more satisfying than clicking a mouse.`
-
-`What makes it fun, curious, engaging, strange, satisfying, competitive, or delightful: Piano Tiles is one of those games that has no right to be as addictive as it is. It is pure reaction speed, and the second you miss a tile the whole run is over, which is infuriating in the best way possible. There is something deeply nostalgic about it too, almost everyone has played it at some point and has a score they are quietly proud of. Playing it on physical foil pads makes that frustration and satisfaction hit even harder because now your whole hand is in it, not just a fingertip on glass.`
-
-`What technologies are involved: ESP32 microcontroller with capacitive touch sensing, jumper wires, aluminum foil as conductors, Arduino-based firmware, and a browser running Magic Piano Tiles as the game interface.`
+`This project is a fully custom-built human-input device (HID) that hijacks a browser-based rhythm game using nothing but an ESP32, some wire, and aluminum foil. The ESP32 has built-in capacitive touch pins that detect when a conductive surface makes contact with a person. Each pin is wired to a strip of aluminum foil laid flat on the floor as a step pad. We built 4 columns to match the exact lane layout of Magic Piano Tiles, so when you step on a pad, the board picks up the change and fires the corresponding input to the game running in the browser. We had to manually tune the sensitivity on each pad to handle the force and contact area of a foot rather than a fingertip, filter out ghost triggers, and deal with the general chaos of conductive pads on the floor, which is a lot trickier than it sounds.
+The real challenge was making it consistent and fast enough to keep up with tiles at full speed. That meant writing tight polling loops, adding debounce logic to avoid double-inputs, and arranging the 4 pads in a layout that felt natural to actually play with your feet. The final result is something that looks unconventional but performs like a piece of real hardware engineering, which is exactly the point.`
 
 ---
 
@@ -56,11 +51,14 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`What is the experience: We built a physical controller from scratch and hooked it up to a game that already has people in a chokehold. You are not tapping a screen anymore, you are hitting actual foil pads that we wired, coded, and calibrated ourselves, and the game has no idea the difference.`
+`What is the experience:
+We built a physical floor controller from scratch and connected it to a game that already has people in a chokehold. You are not tapping a screen anymore, you are stepping on actual foil pads that we wired, coded, and calibrated ourselves, laid out in 4 columns to match the game exactly. The browser has no idea you are playing it with your feet.`
 
-`What do you want the player or participant to feel: We want them to feel the exact same spiral we felt building it, that mix of frustration when something is not working and then the rush when it suddenly clicks. Piano Tiles already does that on its own but now there is a physical thing in front of you and your whole hand is involved. We want them to panic, mess up, laugh about it, and immediately want another go.`
+`What do you want the player or participant to feel:
+We want them to feel the exact same spiral we felt building it, that mix of frustration when something is not working and then the rush when it clicks. Piano Tiles already does that on its own but now your whole body is involved. You are standing, stepping, trying not to lose your balance while the tiles get faster. We want them to panic, mess up, laugh about it, and immediately want another go.`
 
-`Why would someone want to try it again: Piano Tiles does not let you walk away clean. You will always miss a tile and need to prove to yourself you can do better. But with our controller there is an extra layer because you are also getting used to the pads, figuring out your hand placement, and quietly trying to outlast whoever played before you. It turns into a competition without anyone officially declaring one.`
+`Why would someone want to try it again:
+Piano Tiles does not let you walk away clean. You will always miss a step and need to prove to yourself you can do better. But with our controller there is an extra layer because you are also getting used to the pads, figuring out your footing, and quietly trying to outlast whoever played before you. It turns into a competition without anyone officially declaring one.`
 
 ## 2.3 Design Persona
 Complete the sentence below:
@@ -79,15 +77,15 @@ List what inspired the project.
 
 | Source Type | Title / Link | What Inspired You |
 |---|---|---|
-| `[Website]` | `[https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/]` | `[This showed us that aluminum foil wired to an ESP32 touch pin is a legitimate way to build a touch pad. It confirmed that the sensitivity thresholds we needed to tune were real and documented, not something we were making up as we went.]` |
-| `[App]` | `[https://magictiles.org]` | `[The game was the whole reason the project exists. We wanted to see if we could make it playable on physical pads and whether the hardware could actually keep up with the speed of the tiles.]` |
-| `[Video]` | `[https://www.youtube.com/watch?v=nXjj9IXUaA4]` | `[This video showed us that you can build a physical game controller using an Arduino and basic hardware that connects directly to a game. Seeing someone turn a DIY pad into a fully functional DDR controller made us confident we could do the same thing with piano tiles and an ESP32.]` |
+| `Website` | `https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/` | `This showed us that aluminum foil wired to an ESP32 touch pin is a legitimate way to build a touch pad. It confirmed that the sensitivity thresholds we needed to tune were real and documented, not something we were making up as we went.` |
+| `App` | `https://magictiles.org` | `The game was the whole reason the project exists. We wanted to see if we could make it playable on physical pads and whether the hardware could actually keep up with the speed of the tiles.` |
+| `Video` | `https://www.youtube.com/watch?v=nXjj9IXUaA4` | `This video showed us that you can build a physical game controller using an Arduino and basic hardware that connects directly to a game. Seeing someone turn a DIY pad into a fully functional DDR controller made us confident we could do the same thing with piano tiles and an ESP32.` |
 
 ## 3.2 Original Twist
 What makes your project original?
 
 **Response:**  
-`[Most people have played Piano Tiles on a phone screen. We pulled it off a screen entirely and rebuilt the input layer from scratch using an ESP32 and aluminum foil pads that we wired, calibrated, and coded ourselves. There is no kit for what we made. We figured out the touch sensitivity thresholds, solved the signal noise issues, and got it responsive enough to actually keep up with the game at full speed. The twist is that the controller looks unconventional but performs like something engineered, and the game it connects to is one people already have a history with, so the moment they sit down to play it feels both familiar and completely new.`
+`Most people have played Piano Tiles on a phone screen. We pulled it off a screen entirely and rebuilt the input layer from scratch using an ESP32 and 4 aluminum foil pads laid out on the floor that you step on to play. There is no kit for what we made. We figured out the touch sensitivity thresholds for foot contact, solved the signal noise issues, and got it responsive enough to actually keep up with the game at full speed. The twist is that the controller looks unconventional but performs like something engineered, and the game it connects to is one people already have a history with, so the moment they step on the pads it feels both familiar and completely new.`
 
 ---
 
@@ -103,37 +101,41 @@ Examples:
 - move object → sensor detects → sound/light response → player reacts
 
 **Response:**  
-`[Write here]`
+`step → sensor detects → keystroke fires → tile registers → miss or survive → step again`
+
+`The loop is fast, physical and unforgiving. The game dictates the pace and your feet have to keep up. Every correct step keeps you in, every missed pad ends the run and sends you straight back to try again.`
+
+
 
 ## 4.2 Intended Player / Audience
 
 | Question | Response |
 |---|---|
-| Who is this for? | `[Write here]` |
-| Age range | `[Write here]` |
-| Solo or multiplayer | `[Write here]` |
-| Expected duration of one round | `[Write here]` |
-| What should the player feel? | `[Write here]` |
-| Is explanation required before use? | `[Write here]` |
+| Who is this for? | `Classmates, exhibition visitors, anyone who has played Piano Tiles before and wants to experience it in a completely different way` |
+| Age range | `9 and up` |
+| Solo or multiplayer | `Solo, but with an audience watching and waiting for their turn which makes it competitive anyway` |
+| Expected duration of one round | `30 seconds to 2 minutes depending on how far you get before you miss` |
+| What should the player feel? | `Panicked, focused, slightly ridiculous, and desperate to go again` |
+| Is explanation required before use? | `Minimal. Step on the pad that matches the falling tile. Most people figure it out in the first 10 seconds.` |
 
 ## 4.3 Player Journey
 Describe exactly how a player will use the project.
 
-1. **Approach:** `[How does the player first encounter it?]`
-2. **Start:** `[How do they begin?]`
-3. **First Action:** `[What do they do first?]`
-4. **Main Interaction:** `[What keeps happening during use?]`
-5. **System Response:** `[How does the project respond?]`
-6. **Win / Lose / End Condition:** `[How does one round end?]`
-7. **Reset:** `[How does the next round begin?]`
+1. **Approach:** `They see a floor mat made of 4 aluminum foil pads laid out in columns with a screen showing Magic Piano Tiles running above it. Someone is probably already playing or just finished, which is what draws them in.`
+2. **Start:** `They step up to the mat and stand behind the 4 pads, one foot ready. No login, no setup, the game is already running.`
+3. **First Action:** `They step on whichever pad matches the first falling tile and immediately feel whether it registered or not.`
+4. **Main Interaction:** `Tiles fall in one of 4 columns and they have to step on the matching pad in time, continuously, while the speed increases the longer they survive.`
+5. **System Response:** `The ESP32 picks up the step, fires the keystroke to the browser, and the game registers the tile hit in real time. If the pad is missed or a white tile is stepped on, the game ends immediately.`
+6. **Win / Lose / End Condition:** `The round ends when they miss a tile or step on a white space. Their score shows on screen.`
+7. **Reset:** `The game resets in one click and the next person steps up.`
 
 ## 4.4 Rules of Play
 If your project is a game, list the rules clearly.
 
-- `[Rule 1]`
-- `[Rule 2]`
-- `[Rule 3]`
-- `[Rule 4]`
+- `Step only on the pad that matches the falling black tile, one column at a time`
+- `Stepping on a white tile or missing a black tile ends the round immediately`
+- `One player at a time on the mat`
+- `You cannot use your hands, feet only`
 
 ---
 
