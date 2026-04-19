@@ -68,7 +68,7 @@ Complete the sentence below:
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
 
 **Response:**  
-`[Write here]`
+`We are designing this project as if we are a small creative studio making a playable object for classmates and exhibition visitors who want to experience something familiar in a way they have never physically interacted with before.`
 
 ---
 
@@ -87,7 +87,7 @@ List what inspired the project.
 What makes your project original?
 
 **Response:**  
-`[Write here]`
+`[Most people have played Piano Tiles on a phone screen. We pulled it off a screen entirely and rebuilt the input layer from scratch using an ESP32 and aluminum foil pads that we wired, calibrated, and coded ourselves. There is no kit for what we made. We figured out the touch sensitivity thresholds, solved the signal noise issues, and got it responsive enough to actually keep up with the game at full speed. The twist is that the controller looks unconventional but performs like something engineered, and the game it connects to is one people already have a history with, so the moment they sit down to play it feels both familiar and completely new.`
 
 ---
 
