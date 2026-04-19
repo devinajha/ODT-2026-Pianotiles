@@ -17,6 +17,10 @@ while True:
     print()
     time.sleep_ms(500)
 
+
+-----------------------------------------------
+
+
 from machine import Pin, TouchPad
 import time
 
@@ -28,6 +32,9 @@ touch_j = TouchPad(Pin(13))
 while True:
     print("F:", touch_f.read(), " G:", touch_g.read(), " H:", touch_h.read(), " J:", touch_j.read())
     time.sleep_ms(500)
+
+
+-----------------------------------------------
 
 import bluetooth
 import time
