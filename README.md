@@ -7,14 +7,14 @@
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| Mishka Bhandary | Coding | Electronics & Troubleshooting | Circuit connections, breadboard wiring, debugging |
-| Devina Jha | Fabrication & Mechanics | Troubleshooting | Physical build, ideation sketches, repository setup |
+|`Mishka Bhandary` | `Coding` | `Electronics & Troubleshooting` | `Circuit connections, breadboard wiring, debugging` |
+|`Devina Jha` | `Fabrication & Mechanics` | `Troubleshooting` | `Physical build, ideation sketches, repository setup` |
 
 ## 1.3 Project Title
-A Capacitive Touch Rhythm Controller Built on ESP32 Hardware with Real-Time Browser Game Integration
+`A Capacitive Touch Rhythm Controller Built on ESP32 Hardware with Real-Time Browser Game Integration`
 
 ## 1.4 One-Line Pitch
-We reverse-engineered the concept of a commercial game controller using an ESP32 microcontroller, raw jumper wire, and kitchen aluminum foil to build a capacitive touch input system that plays Magic Piano Tiles in real time with zero lag and maximum chaos.
+`We reverse-engineered the concept of a commercial game controller using an ESP32 microcontroller, raw jumper wire, and kitchen aluminum foil to build a capacitive touch input system that plays Magic Piano Tiles in real time with zero lag and maximum chaos.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -24,10 +24,13 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`What our project is: A physical game controller built from an ESP32 microcontroller and aluminum foil pads that lets you play Magic Piano Tiles by tapping real surfaces instead of a screen or keyboard.
-What kind of playful experience it creates: It turns a fast-paced rhythm game into a full-body, hands-on experience where you are literally slapping foil to hit notes, which is chaotic, competitive, and way more satisfying than clicking a mouse.
-What makes it fun, curious, engaging, strange, satisfying, competitive, or delightful: Piano Tiles is one of those games that has no right to be as addictive as it is. It is pure reaction speed, and the second you miss a tile the whole run is over, which is infuriating in the best way possible. There is something deeply nostalgic about it too, almost everyone has played it at some point and has a score they are quietly proud of. Playing it on physical foil pads makes that frustration and satisfaction hit even harder because now your whole hand is in it, not just a fingertip on glass.
-What technologies are involved: ESP32 microcontroller with capacitive touch sensing, jumper wires, aluminum foil as conductors, Arduino-based firmware, and a browser running Magic Piano Tiles as the game interface.`
+`What our project is: A physical game controller built from an ESP32 microcontroller and aluminum foil pads that lets you play Magic Piano Tiles by tapping real surfaces instead of a screen or keyboard.`
+
+`What kind of playful experience it creates: It turns a fast-paced rhythm game into a full-body, hands-on experience where you are literally slapping foil to hit notes, which is chaotic, competitive, and way more satisfying than clicking a mouse.`
+
+`What makes it fun, curious, engaging, strange, satisfying, competitive, or delightful: Piano Tiles is one of those games that has no right to be as addictive as it is. It is pure reaction speed, and the second you miss a tile the whole run is over, which is infuriating in the best way possible. There is something deeply nostalgic about it too, almost everyone has played it at some point and has a score they are quietly proud of. Playing it on physical foil pads makes that frustration and satisfaction hit even harder because now your whole hand is in it, not just a fingertip on glass.`
+
+`What technologies are involved: ESP32 microcontroller with capacitive touch sensing, jumper wires, aluminum foil as conductors, Arduino-based firmware, and a browser running Magic Piano Tiles as the game interface.`
 
 ---
 
@@ -53,9 +56,11 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`What is the experience: We built a physical controller from scratch and hooked it up to a game that already has people in a chokehold. You are not tapping a screen anymore, you are hitting actual foil pads that we wired, coded, and calibrated ourselves, and the game has no idea the difference.
-What do you want the player or participant to feel: We want them to feel the exact same spiral we felt building it, that mix of frustration when something is not working and then the rush when it suddenly clicks. Piano Tiles already does that on its own but now there is a physical thing in front of you and your whole hand is involved. We want them to panic, mess up, laugh about it, and immediately want another go.
-Why would someone want to try it again: Piano Tiles does not let you walk away clean. You will always miss a tile and need to prove to yourself you can do better. But with our controller there is an extra layer because you are also getting used to the pads, figuring out your hand placement, and quietly trying to outlast whoever played before you. It turns into a competition without anyone officially declaring one.`
+`What is the experience: We built a physical controller from scratch and hooked it up to a game that already has people in a chokehold. You are not tapping a screen anymore, you are hitting actual foil pads that we wired, coded, and calibrated ourselves, and the game has no idea the difference.`
+
+`What do you want the player or participant to feel: We want them to feel the exact same spiral we felt building it, that mix of frustration when something is not working and then the rush when it suddenly clicks. Piano Tiles already does that on its own but now there is a physical thing in front of you and your whole hand is involved. We want them to panic, mess up, laugh about it, and immediately want another go.`
+
+`Why would someone want to try it again: Piano Tiles does not let you walk away clean. You will always miss a tile and need to prove to yourself you can do better. But with our controller there is an extra layer because you are also getting used to the pads, figuring out your hand placement, and quietly trying to outlast whoever played before you. It turns into a competition without anyone officially declaring one.`
 
 ## 2.3 Design Persona
 Complete the sentence below:
@@ -74,9 +79,9 @@ List what inspired the project.
 
 | Source Type | Title / Link | What Inspired You |
 |---|---|---|
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
+| `[Website]` | `[https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/]` | `[This showed us that aluminum foil wired to an ESP32 touch pin is a legitimate way to build a touch pad. It confirmed that the sensitivity thresholds we needed to tune were real and documented, not something we were making up as we went.]` |
+| `[App]` | `[https://magictiles.org]` | `[The game was the whole reason the project exists. We wanted to see if we could make it playable on physical pads and whether the hardware could actually keep up with the speed of the tiles.]` |
+| `[Video]` | `[https://www.youtube.com/watch?v=nXjj9IXUaA4]` | `[This video showed us that you can build a physical game controller using an Arduino and basic hardware that connects directly to a game. Seeing someone turn a DIY pad into a fully functional DDR controller made us confident we could do the same thing with piano tiles and an ESP32.]` |
 
 ## 3.2 Original Twist
 What makes your project original?
