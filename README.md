@@ -687,8 +687,8 @@ Example:
 | Version | Date | What Changed | Why |
 |---|---|---|---|
 | `v1` | `[10/04/2026]` | `[Built initial prototype using plywood base, foil touch sensors, and basic ESP32 input mapping]` | `[To test core concept of controlling Piano Tiles using foot interaction]` |
-| `v2` | `[Date]` | `[Adjusted touch sensitivity and improved wiring stability,]` | `[Initial testing showed missed inputs, false triggers, and confusion about tile mapping]` |
-| `v3` | `[Date]` | `[Added secondary paper layer with aluminium foil for better responsiveness, modified tile spacing, and optimized code for reduced delay]` | `[To improve gameplay comfort, reduce input lag, and make interaction more reliable during fast sequences]` |
+| `v2` | `[13/04/2026]` | `[Adjusted touch sensitivity and improved wiring stability,]` | `[Initial testing showed missed inputs, false triggers, and confusion about tile mapping]` |
+| `v3` | `[19/04/2026]` | `[Added secondary paper layer with aluminium foil for better responsiveness, modified tile spacing, and optimized code for reduced delay]` | `[To improve gameplay comfort, reduce input lag, and make interaction more reliable during fast sequences]` |
 
 ---
 
@@ -698,23 +698,23 @@ Example:
 Describe the final version of your project.
 
 **Response:**  
-`[Write here]`
+`[The final outcome is a fully functional, interactive floor-based controller that allows users to play Piano Tiles using physical movement instead of traditional touch input. Built on a reinforced plywood base, the system uses four capacitive touch tiles made from layered aluminum foil and paper, each mapped to specific keyboard inputs (F, G, H, L). These inputs are processed by an ESP32 microcontroller and transmitted via Bluetooth to a laptop, enabling real-time gameplay. The design emphasizes full-body engagement, transforming a screen-based tapping game into an immersive, movement-driven experience. Through iterative prototyping, the system was refined for improved responsiveness, stability, and usability, resulting in a reliable and engaging interactive setup.]`
 
 ## 18.2 What Works Well
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- `[The physical interaction is highly engaging and makes gameplay more immersive than standard touch controls]`
+- `[The system successfully translates foot input into accurate keyboard signals with minimal delay]`
+- `[The modular tile design allows for easy adjustments and experimentation with layout and spacing]`
 
 ## 18.3 What Still Needs Improvement
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- `[Sensitivity can still vary slightly between tiles, affecting consistency]`
+- `[Fast-paced gameplay is limited by physical movement speed and reaction time]`
+- `[The current build could be more durable and refined for long-term or repeated use]`
 
 ## 18.4 What Changed From the Original Plan
 How did the project change from the initial idea?
 
 **Response:**  
-`[Write here]`
+`[The overall concept of the project remained largely unchanged from the initial plan, which was to create a floor-based controller for playing Piano Tiles. Most of the development focused on experimenting with different ways of constructing the touch pads to achieve reliable input. This included testing various material layers, arrangements, and sensitivity settings to improve consistency and responsiveness. Rather than significantly altering the design direction, the process was primarily iterative, refining the touch mechanism and physical build while keeping the original idea intact.]`
 
 ---
 
