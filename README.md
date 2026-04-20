@@ -398,7 +398,7 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-`[(https://www.figma.com/design/FKTekB9UcHeT6a4AJiR0C5/Code-Flowchart?node-id=0-1&t=iF5ayZWNHopUMEsI-1)]`
+`[images/Code flow chart.png]`
 
 ## 10.4 Pseudocode
 
