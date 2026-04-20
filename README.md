@@ -226,7 +226,7 @@ Include:
 Add an early sketch of the full idea.
 
 **Insert image below:**  
-`[Upload image and link here]`
+`[images/Stepsbystep.png]]`
 
 Example:
 ```md
@@ -242,7 +242,7 @@ Add a sketch with labels showing:
 - output elements.
 
 **Insert image below:**  
-`[images/Stepsbystep.png]`
+`[images/Ideation.png]`
 
 ## 7.3 Approximate Dimensions
 
