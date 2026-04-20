@@ -403,7 +403,40 @@ Suggested sequence:
 ## 10.4 Pseudocode
 
 ```text
-[Pseudocode]
+[START
+
+Setup BLE keyboard
+Setup 4 touch sensors (F, G, H, J)
+
+Calibrate sensors → store baseline values
+
+WAIT until Bluetooth connects
+
+LOOP forever:
+
+    IF connected:
+
+        Read all sensors
+        Compare each reading with its baseline
+
+        IF value change is high → key is pressed
+        IF value returns to normal → key is released
+
+        Apply debounce (ignore very fast repeats)
+
+        Track which keys are currently held
+
+        Send all active keys to laptop
+
+        IF no keys are pressed:
+            slowly update baseline (adjust for environment)
+
+    ELSE:
+        Reset all key states
+
+    Wait a short time
+
+END LOOP]
 ```
 
 ---
