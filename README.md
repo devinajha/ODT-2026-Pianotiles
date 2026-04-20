@@ -242,7 +242,7 @@ Add a sketch with labels showing:
 - output elements.
 
 **Insert image below:**  
-`[Upload image and link here]`
+`[images/Stepsbystep.png]`
 
 ## 7.3 Approximate Dimensions
 
