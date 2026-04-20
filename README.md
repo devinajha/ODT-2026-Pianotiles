@@ -648,9 +648,9 @@ What is the single biggest uncertainty in your project at this stage?
 
 | Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
 |---|---|---|---|---|
-| `[friend (non-gamer) ]` | `[Rested foot on tile between steps]` | `[Game triggered unintentionally]` | `[Slow-paced songs]` | `[Add to gameplay instructions not to rest on one tile between steps]` |
-| `[Peer (non-gamer) ]` | `[Hesitated at start, looked at feet before stepping]` | `[Didn’t understand tile-to-key mapping immediately]` | `[Found stepping interaction fun after a few tries]` | `[Add clear visual cues of piano tiles]` |
-| `[Friend (gamer) ]` | `[Played confidently]` | `[Timing felt slightly off during faster notes]` | `[Physical engagement made it more immersive]` | `[Increase pressure sensitivity to during faster notes it detects touch faster]` |
+| `friend (non-gamer)` | `[Rested foot on tile between steps]` | `Game triggered unintentionally` | `Slow-paced songs` | `Add to gameplay instructions not to rest on one tile between steps` |
+| `Peer (non-gamer)` | `[Hesitated at start, looked at feet before stepping]` | `Didn’t understand tile-to-key mapping immediately` | `Found stepping interaction fun after a few tries` | `Add clear visual cues of piano tiles` |
+| `Friend (gamer)` | `[Played confidently]` | `Timing felt slightly off during faster notes` | `Physical engagement made it more immersive` | `Increase pressure sensitivity to during faster notes it detects touch faster` |
 
 ---
 
@@ -669,7 +669,7 @@ Include:
 - revisions.
 
 **Response:**  
-`[The project was built as a full-scale interactive floor controller using simple materials, iterative prototyping, and embedded electronics. The keyboard structure was constructed from a 30 × 11 inch plywood board, reinforced with four wooden strips fastened along the perimeter and an additional central strip to improve stability during use. The surface was then divided into four equal sections, and aluminum foil sheets measuring 6 × 10 inches were cut to form consistent sensor pads. Each tile was assembled by layering a base conductive foil layer, a secondary foil layer, and a top contact layer made of paper, carefully aligned to ensure reliable triggering when stepped on. These tiles were arranged linearly on the board to correspond with the game inputs. Components were secured using electrical tape and super glue to maintain durability under repeated use. Each tile was wired to a capacitive touch pin on the ESP32 using jumper wires, with a common ground established where necessary. The microcontroller was programmed to convert each tile input into keyboard signals (F, G, H, L), enabling seamless interaction with the Piano Tiles game on a laptop via Bluetooth. The system was refined through multiple iterations based on testing, including adjustments to sensitivity in code to reduce false or missed inputs, modifications to tile spacing and layout for improved balance and comfort, and reinforcement of wiring after initial failures during active gameplay.]`
+`The project was built as a full-scale interactive floor controller using simple materials, iterative prototyping, and embedded electronics. The keyboard structure was constructed from a 30 × 11 inch plywood board, reinforced with four wooden strips fastened along the perimeter and an additional central strip to improve stability during use. The surface was then divided into four equal sections, and aluminum foil sheets measuring 6 × 10 inches were cut to form consistent sensor pads. Each tile was assembled by layering a base conductive foil layer, a secondary foil layer, and a top contact layer made of paper, carefully aligned to ensure reliable triggering when stepped on. These tiles were arranged linearly on the board to correspond with the game inputs. Components were secured using electrical tape and super glue to maintain durability under repeated use. Each tile was wired to a capacitive touch pin on the ESP32 using jumper wires, with a common ground established where necessary. The microcontroller was programmed to convert each tile input into keyboard signals (F, G, H, L), enabling seamless interaction with the Piano Tiles game on a laptop via Bluetooth. The system was refined through multiple iterations based on testing, including adjustments to sensitivity in code to reduce false or missed inputs, modifications to tile spacing and layout for improved balance and comfort, and reinforcement of wiring after initial failures during active gameplay.`
 
 ## 17.2 Build Photos
 Add photos throughout the project.
@@ -693,9 +693,9 @@ Example:
 
 | Version | Date | What Changed | Why |
 |---|---|---|---|
-| `v1` | `[10/04/2026]` | `[Built initial prototype using plywood base, foil touch sensors, and basic ESP32 input mapping]` | `[To test core concept of controlling Piano Tiles using foot interaction]` |
-| `v2` | `[13/04/2026]` | `[Adjusted touch sensitivity and improved wiring stability,]` | `[Initial testing showed missed inputs, false triggers, and confusion about tile mapping]` |
-| `v3` | `[19/04/2026]` | `[Added secondary paper layer with aluminium foil for better responsiveness, modified tile spacing, and optimized code for reduced delay]` | `[To improve gameplay comfort, reduce input lag, and make interaction more reliable during fast sequences]` |
+| `v1` | `[10/04/2026]` | `Built initial prototype using plywood base, foil touch sensors, and basic ESP32 input mapping` | `To test core concept of controlling Piano Tiles using foot interaction` |
+| `v2` | `[13/04/2026]` | `Adjusted touch sensitivity and improved wiring stability` | `Initial testing showed missed inputs, false triggers, and confusion about tile mapping` |
+| `v3` | `[19/04/2026]` | `Added secondary paper layer with aluminium foil for better responsiveness, modified tile spacing, and optimized code for reduced delay` | `To improve gameplay comfort, reduce input lag, and make interaction more reliable during fast sequences` |
 
 ---
 
@@ -705,23 +705,23 @@ Example:
 Describe the final version of your project.
 
 **Response:**  
-`[The final outcome is a fully functional, interactive floor-based controller that allows users to play Piano Tiles using physical movement instead of traditional touch input. Built on a reinforced plywood base, the system uses four capacitive touch tiles made from layered aluminum foil and paper, each mapped to specific keyboard inputs (F, G, H, L). These inputs are processed by an ESP32 microcontroller and transmitted via Bluetooth to a laptop, enabling real-time gameplay. The design emphasizes full-body engagement, transforming a screen-based tapping game into an immersive, movement-driven experience. Through iterative prototyping, the system was refined for improved responsiveness, stability, and usability, resulting in a reliable and engaging interactive setup.]`
+`The final outcome is a fully functional, interactive floor-based controller that allows users to play Piano Tiles using physical movement instead of traditional touch input. Built on a reinforced plywood base, the system uses four capacitive touch tiles made from layered aluminum foil and paper, each mapped to specific keyboard inputs (F, G, H, L). These inputs are processed by an ESP32 microcontroller and transmitted via Bluetooth to a laptop, enabling real-time gameplay. The design emphasizes full-body engagement, transforming a screen-based tapping game into an immersive, movement-driven experience. Through iterative prototyping, the system was refined for improved responsiveness, stability, and usability, resulting in a reliable and engaging interactive setup.`
 
 ## 18.2 What Works Well
-- `[The physical interaction is highly engaging and makes gameplay more immersive than standard touch controls]`
-- `[The system successfully translates foot input into accurate keyboard signals with minimal delay]`
-- `[The modular tile design allows for easy adjustments and experimentation with layout and spacing]`
+- `The physical interaction is highly engaging and makes gameplay more immersive than standard touch controls`
+- `The system successfully translates foot input into accurate keyboard signals with minimal delay`
+- `The modular tile design allows for easy adjustments and experimentation with layout and spacing`
 
 ## 18.3 What Still Needs Improvement
-- `[Sensitivity can still vary slightly between tiles, affecting consistency]`
-- `[Fast-paced gameplay is limited by physical movement speed and reaction time]`
-- `[The current build could be more durable and refined for long-term or repeated use]`
+- `Sensitivity can still vary slightly between tiles, affecting consistency`
+- `Fast-paced gameplay is limited by physical movement speed and reaction time`
+- `The current build could be more durable and refined for long-term or repeated use`
 
 ## 18.4 What Changed From the Original Plan
 How did the project change from the initial idea?
 
 **Response:**  
-`[The overall concept of the project remained largely unchanged from the initial plan, which was to create a floor-based controller for playing Piano Tiles. Most of the development focused on experimenting with different ways of constructing the touch pads to achieve reliable input. This included testing various material layers, arrangements, and sensitivity settings to improve consistency and responsiveness. Rather than significantly altering the design direction, the process was primarily iterative, refining the touch mechanism and physical build while keeping the original idea intact.]`
+`The overall concept of the project remained largely unchanged from the initial plan, which was to create a floor-based controller for playing Piano Tiles. Most of the development focused on experimenting with different ways of constructing the touch pads to achieve reliable input. This included testing various material layers, arrangements, and sensitivity settings to improve consistency and responsiveness. Rather than significantly altering the design direction, the process was primarily iterative, refining the touch mechanism and physical build while keeping the original idea intact.`
 
 ---
 
@@ -733,7 +733,7 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
-`[The team worked well in collaboratively building and testing the prototype, with tasks divided between fabrication, wiring, and coding. Communication was consistent during hands-on work, which helped in quickly identifying and fixing issues. However, progress was sometimes slowed down by trial-and-error, especially while figuring out the most reliable way to construct the touch pads and calibrate sensitivity. Time management was generally effective during building phases, but more structured planning earlier on could have reduced repeated iterations. Overall, responsibilities were shared fairly, and the team adapted well to challenges as they arose.]`
+`The team worked well in collaboratively building and testing the prototype, with tasks divided between fabrication, wiring, and coding. Communication was consistent during hands-on work, which helped in quickly identifying and fixing issues. However, progress was sometimes slowed down by trial-and-error, especially while figuring out the most reliable way to construct the touch pads and calibrate sensitivity. Time management was generally effective during building phases, but more structured planning earlier on could have reduced repeated iterations. Overall, responsibilities were shared fairly, and the team adapted well to challenges as they arose.`
 
 ## 19.2 Technical Reflection
 What did you learn about:
@@ -744,7 +744,7 @@ What did you learn about:
 - integration?
 
 **Response:**  
-`[Through this project, we learned how capacitive touch sensing works in practice and how material choices and layering directly affect input reliability. In coding, we gained experience in mapping sensor inputs to keyboard outputs and optimizing responsiveness by adjusting thresholds and delays. Mechanically, we understood how small construction details, such as spacing and pressure distribution, influence performance. In terms of fabrication, we learned the importance of precision and durability when building interactive systems. Integration was a key learning area, as combining hardware, software, and physical interaction required constant testing and adjustment to ensure all components worked seamlessly together.]`
+`Through this project, we learned how capacitive touch sensing works in practice and how material choices and layering directly affect input reliability. In coding, we gained experience in mapping sensor inputs to keyboard outputs and optimizing responsiveness by adjusting thresholds and delays. Mechanically, we understood how small construction details, such as spacing and pressure distribution, influence performance. In terms of fabrication, we learned the importance of precision and durability when building interactive systems. Integration was a key learning area, as combining hardware, software, and physical interaction required constant testing and adjustment to ensure all components worked seamlessly together.`
 
 ## 19.3 Design Reflection
 What did you learn about:
@@ -756,13 +756,13 @@ What did you learn about:
 - iteration?
 
 **Response:**  
-`[This project highlighted the importance of designing for play by focusing on engagement and physical interaction rather than just functionality. We learned that delight comes from the novelty of movement-based gameplay, but it must be supported by clarity in how the system works. Clear mapping between tiles and inputs was essential for player understanding, especially for first-time users. Iteration played a major role in improving the experience, as repeated testing revealed issues with balance, responsiveness, and usability. Overall, the project reinforced that good interaction design must consider both the physical and cognitive experience of the user.]`
+`This project highlighted the importance of designing for play by focusing on engagement and physical interaction rather than just functionality. We learned that delight comes from the novelty of movement-based gameplay, but it must be supported by clarity in how the system works. Clear mapping between tiles and inputs was essential for player understanding, especially for first-time users. Iteration played a major role in improving the experience, as repeated testing revealed issues with balance, responsiveness, and usability. Overall, the project reinforced that good interaction design must consider both the physical and cognitive experience of the user.`
 
 ## 19.4 If You Had One More Week
 What would you improve next?
 
 **Response:**  
-`[With an additional week, we would focus on refining the build quality and user experience. This would include making the tiles more durable and consistent, improving sensitivity calibration across all inputs, and enhancing the overall finish of the board. We also struggled with sourcing LED strips, and would have liked to add LED strips that react to the touch sensors and flash multicoloured lights during the gameplay.]`
+`With an additional week, we would focus on refining the build quality and user experience. This would include making the tiles more durable and consistent, improving sensitivity calibration across all inputs, and enhancing the overall finish of the board. We also struggled with sourcing LED strips, and would have liked to add LED strips that react to the touch sensors and flash multicoloured lights during the gameplay.`
 
 ---
 
