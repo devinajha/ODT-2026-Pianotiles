@@ -613,34 +613,37 @@ What is the single biggest uncertainty in your project at this stage?
 
 | What Needs Testing | How You Will Test It | Success Condition |
 |---|---|---|
-| `[Bluetooth connection]` | `[Method]` | `[What counts as success?]` |
-| `[Mechanism movement]` | `[Method]` | `[What counts as success?]` |
-| `[Sensor behavior]` | `[Method]` | `[What counts as success?]` |
-| `[App communication]` | `[Method]` | `[What counts as success?]` |
+| `[Touch Pin Sensor]` | `[Attach to ESP32 and run a test code to see if they detect touch]` | `[Touch Pin detects touch]` |
+| `[BLE Keyboard]` | `[Upload onto ESP32]` | `[When touching the touch pin results in the coressponding key being pressed on the keyboard]` |
+| `[Touch Pad]` | `[Using aluminium foil sheets]` | `[The touch sensor is magnified across the aluminium pad and the pad can detect touch]` |
 
 ## 16.2 Playtesting Plan
 
 | Question | How You Will Check |
 |---|---|
-| Do players understand what to do? | `[Method]` |
-| Is the interaction satisfying? | `[Method]` |
-| Do players want another turn? | `[Method]` |
-| Is the challenge balanced? | `[Method]` |
-| Is the response clear and immediate? | `[Method]` |
+| Do players understand what to do? | `[give minimal instructions and see if they step on tiles correctly within 10–15 seconds]` |
+| Is the interaction satisfying? | `[Ask for immediate feedback after 1 round (“Did it feel responsive/fun?”) and watch facial reactions/body movement]` |
+| Do players want another turn? | `[Count how many players voluntarily replay without prompting]` |
+| Is the challenge balanced? | `[Track the fail time, if its too fast the game is too hard, and too long meanstoo easy. Also ask “too easy / too hard / just right?”]` |
+| Is the response clear and immediate? | `[check screen delay]` |
 
 ## 16.3 Testing and Debugging Log
 
 | Date | Problem Found | Type | What You Tried | Result | Next Action |
 |---|---|---|---|---|---|
-| `[Date]` | `[Describe issue]` | `[Technical / Mechanical / UI / Gameplay]` | `[What you did]` | `[Worked / Partly / Failed]` | `[Next step]` |
-| `[Date]` | `[Describe issue]` | `[Type]` | `[What you did]` | `[Result]` | `[Next step]` |
+| `[06/04/2026]` | `[Inconsistent sensitivity between different touch pins]` | `[Technical]` | `[Calibrated touch values for each pin and set a threshold]` | `[Worked]` | `[None]` |
+| `[10/04/2026]` | `[Steps sometimes don’t register when pressed lightly]` | `[Technical / Mechanical]` | `[adjusted touch sensitivity threshold in ESP32]` | `[Partly]` | `[Calibrate it to detect pressure with another layer over the touch pad]` |
+| `[11/04/2026]` | `[Cable connections loosen during gameplay]` | `[Mechanical]` | `[Taped wires to board]` | `[Worked]` | `[None]` |
+| `[15/04/2026]` | `[Touch isnt registered when placing a paper cover over the touch pad]` | `[Technical]` | `[Added a layer of aluminium foil to the bottom of the paper ]` | `[Partly]` | `[Change calibration in the code to make allowance for the Paper covering the touch pad]` |
+| `[19/04/2026]` | `[Neopixel strip wont connect to the power supply and work]` | `[Mechanical]` | `[Changed the power supply and edited code]` | `[Failed]` | `[Unable to apply to board]` |
 
 ## 16.4 Playtesting Notes
 
 | Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
 |---|---|---|---|---|
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
+| `[friend (non-gamer) ]` | `[Rested foot on tile between steps]` | `[Game triggered unintentionally]` | `[Slow-paced songs]` | `[Add to gameplay instructions not to rest on one tile between steps]` |
+| `[Peer (non-gamer) ]` | `[Hesitated at start, looked at feet before stepping]` | `[Didn’t understand tile-to-key mapping immediately]` | `[Found stepping interaction fun after a few tries]` | `[Add clear visual cues of piano tiles]` |
+| `[Friend (gamer) ]` | `[Played confidently]` | `[Timing felt slightly off during faster notes]` | `[Physical engagement made it more immersive]` | `[Increase pressure sensitivity to during faster notes it detects touch faster]` |
 
 ---
 
@@ -659,7 +662,9 @@ Include:
 - revisions.
 
 **Response:**  
-`[Write here]`
+`The project was built as a full-scale interactive floor controller using simple materials, iterative prototyping, and embedded electronics.
+
+The keyboard was built from a 25 by 10 inch plywood board, with 4 strips of wood fastened on the perimeter of the board, and one running along the center to ensure stability. The board was then seperated into 4 equal sections and sluminum foil sheets for each sensor pad were cut into equal-sized squares to maintain consistent input areas. Each sheet was`
 
 ## 17.2 Build Photos
 Add photos throughout the project.
