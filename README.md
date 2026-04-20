@@ -592,37 +592,37 @@ Documentation was maintained alongside the process. Key changes, test results, a
 
 ### Week 1 — Plan and De-risk
 Expected outcomes:
-- [ ] Idea finalized
-- [ ] Core interaction decided
-- [ ] Sketches made
-- [ ] BOM completed
+- [✔] Idea finalized
+- [✔] Core interaction decided
+- [✔] Sketches made
+- [✔] BOM completed
 - [ ] Purchase needs identified
 - [ ] Key uncertainty identified
-- [ ] Basic feasibility tested
+- [✔] Basic feasibility tested
 
 ### Week 2 — Build Subsystems
 Expected outcomes:
-- [ ] Electronics tests completed
+- [✔] Electronics tests completed
 - [ ] CAD / structure planning completed
 - [ ] App UI started if needed
-- [ ] Mechanical concept tested
-- [ ] Main subsystems partially working
+- [✔] Mechanical concept tested
+- [✔] Main subsystems partially working
 
 ### Week 3 — Integrate
 Expected outcomes:
-- [ ] Physical body built
-- [ ] Electronics integrated
-- [ ] Code connected to hardware
+- [✔] Physical body built
+- [✔] Electronics integrated
+- [✔] Code connected to hardware
 - [ ] App connected if required
-- [ ] First playable version exists
+- [✔] First playable version exists
 
 ### Week 4 — Refine and Finish
 Expected outcomes:
-- [ ] Technical bugs reduced
-- [ ] Playtesting completed
-- [ ] Improvements made
-- [ ] Documentation completed
-- [ ] Final build ready
+- [✔] Technical bugs reduced
+- [✔] Playtesting completed
+- [✔] Improvements made
+- [✔] Documentation completed
+- [✔] Final build ready
 
 ## 14.2 Weekly Update Log
 
