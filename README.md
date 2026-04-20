@@ -378,7 +378,11 @@ Include:
 - reset behavior.
 
 **Response:**  
-`[Write here]`
+`When the program starts, it sets up a BLE keyboard called “ESP32” and connects four touch sensors to pins 15, 13, 12, and 14, mapped to keys F, G, H, and J. It then runs a calibration step, taking multiple readings from each sensor to find their normal (resting) values. After printing these values, it waits until a Bluetooth connection is made.
+Two methods are used for reading sensors. During calibration, 50 readings are taken and averaged. During normal use, 10 quick readings are averaged to reduce noise while keeping the system responsive.
+In each loop, all four sensors are read. The program compares the current value to the baseline to calculate a delta. A drop in value means the sensor is being touched. To avoid flickering, the system uses hysteresis. A key is pressed when the delta is above 20, and released when it drops below 10. A 200ms delay prevents rapid repeated inputs. The program keeps track of whether each key is currently held.
+All active keys are sent together as a single keyboard signal via Bluetooth. This allows multiple keys to be pressed at once. Key actions (like “F DOWN” or “H UP”) are also printed for debugging.
+The program constantly checks if Bluetooth is connected. Once connected, it waits 2 seconds before sending inputs to ensure stability. Inputs are only sent while connected. If the connection is lost, all keys are reset to avoid stuck inputs. The system also slowly adjusts the baseline values over time when no keys are pressed, helping maintain accuracy despite environmental changes like temperature or humidity.`
 
 ## 10.3 Code Flowchart
 Insert a flowchart showing your code logic.
