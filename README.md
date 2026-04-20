@@ -340,7 +340,7 @@ Describe the main electrical connections.
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
-`[images/Circuit Diagram.png]`
+`[docs/Circuit Diagram.png]`
 
 ## 9.4 Power Plan
 
@@ -398,7 +398,7 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-`[images/Code flow chart.png]`
+`[docs/Code flow chart.png]`
 
 ## 10.4 Pseudocode
 
