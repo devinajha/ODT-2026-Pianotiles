@@ -35,9 +35,10 @@ touch_pads = {
 held = {k: False for k in keys}
 last_touch_time = {k: 0 for k in keys}
 
-# Tunable parameters
-THRESHOLD_OFFSET = 100      # sensitivity (increase if too sensitive)
-DEBOUNCE_MS = 120          # increase for foot stepping stability
+# Tunable parameters (STABLE VALUES)
+TOUCH_THRESHOLD = 20
+RELEASE_THRESHOLD = 10
+DEBOUNCE_MS = 200
 
 # ---------- Helper Functions ----------
 
@@ -48,7 +49,7 @@ def calibrate(touch, samples=50):
         time.sleep_ms(10)
     return total // samples
 
-def smooth_read(touch, samples=5):
+def smooth_read(touch, samples=10):
     return sum(touch.read() for _ in range(samples)) // samples
 
 def send_keys(active_keys):
@@ -81,35 +82,40 @@ while True:
 
         try:
             now = time.ticks_ms()
-
-            touches = {}
-
-            # Read + detect touches
-            for k in touch_pads:
-                val = smooth_read(touch_pads[k])
-                threshold = baseline[k] - THRESHOLD_OFFSET
-                touches[k] = val < threshold
-
             active_keys = []
 
-            # Debounce + state tracking
-            for pad, touched in touches.items():
-                if touched and not held[pad]:
-                    if time.ticks_diff(now, last_touch_time[pad]) > DEBOUNCE_MS:
-                        print(f"{pad.upper()} DOWN")
-                        held[pad] = True
-                        last_touch_time[pad] = now
+            for k in touch_pads:
+                val = smooth_read(touch_pads[k])
+                delta = baseline[k] - val
 
-                elif not touched and held[pad]:
-                    print(f"{pad.upper()} UP")
-                    held[pad] = False
-                    last_touch_time[pad] = now
+                # hysteresis logic
+                if not held[k]:
+                    touched = delta > TOUCH_THRESHOLD
+                else:
+                    touched = delta > RELEASE_THRESHOLD
 
-                if held[pad]:
-                    active_keys.append(pad)
+                # debounce + state tracking
+                if touched and not held[k]:
+                    if time.ticks_diff(now, last_touch_time[k]) > DEBOUNCE_MS:
+                        print(f"{k.upper()} DOWN")
+                        held[k] = True
+                        last_touch_time[k] = now
 
-            # Send all active keys together
+                elif not touched and held[k]:
+                    print(f"{k.upper()} UP")
+                    held[k] = False
+                    last_touch_time[k] = now
+
+                if held[k]:
+                    active_keys.append(k)
+
+            # send all active keys together
             send_keys(active_keys)
+
+            # slow baseline drift correction (only when untouched)
+            if not any(held.values()):
+                for k in baseline:
+                    baseline[k] = int(0.99 * baseline[k] + 0.01 * smooth_read(touch_pads[k]))
 
         except ValueError:
             pass
