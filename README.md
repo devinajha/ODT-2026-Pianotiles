@@ -340,7 +340,7 @@ Describe the main electrical connections.
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
-`[Upload image and link here]`
+`[https://www.figma.com/design/FKTekB9UcHeT6a4AJiR0C5/Images?node-id=3-61&p=f&t=iF5ayZWNHopUMEsI-0]`
 
 ## 9.4 Power Plan
 
