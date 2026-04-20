@@ -455,9 +455,14 @@ Insert a sketch or screenshot of the app interface.
 
 | Item | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
 |---|---:|---|---|---:|---|---|
-| `[ESP32]` | `1` | `Yes` | `No` | `0` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
+| `[ESP32]` | `1` | `Yes` | `No` | `0` | `[Spec]` | `[Enables wireless keyboard input and touch sensing in one board]` |
+| `[Plywood Board (30 × 11 inch)]` | `[1]` | `[No]` | `[No (obtained from lab)]` | `[0]` | `[30 × 11 inch]` | `[Provides a strong, stable base for stepping and mounting components]` |
+| `[Aluminum Foil]` | `[1]` | `[No]` | `[Yes]` | `[74 INR]` | `[1 roll]` | `[Acts as conductive material for capacitive touch sensors]` |
+| `[Jumper Wires]` | `[10]` | `[Yes]` | `[No]` | `[0]` | `[10 wired]` | `[connection between tiles and ESP32 pins]` |
+| `[A3 Paper]` | `[1]` | `[No]` | `[Yes]` | `[200 INR]` | `[140 GSM Sketchbook]` | `[Layered ontop of aluminium for better gameplay]` |
+| `[Electrical Tape]` | `[1]` | `[No]` | `[Yes]` | `[100 INR]` | `[4 rolls]` | `[Secures components and prevents short circuits]` |
+| `[Super Glue]` | `[1]` | `[No]` | `[Yes]` | `[50 INR]` | `[Fast-setting adhesive]` | `[Strong bonding for fixing layers and components]` |
+| `[Wooden Strips]` | `[5]` | `[No]` | `[Yes]` | `[0]` | `[Narrow wooden battens]` | `[Reinforces board to prevent bending and breaking during use]` |
 
 ## 12.2 Material Justification
 Explain why you selected your main materials and components.
@@ -469,31 +474,33 @@ Examples:
 - Why bearing instead of a plain shaft hole?
 
 **Response:**  
-`[Write here]`
+`[The materials and components were selected based on a balance of durability, simplicity, cost, and suitability for rapid prototyping. Plywood was chosen for the base instead of cardboard because it provides the strength and rigidity needed to withstand repeated stepping without bending or damage. Aluminum foil was used for the touch sensors due to its high conductivity, low cost, and ease of shaping, making it more practical than specialized conductive materials. A layered paper structure was preferred over more complex mechanisms because it allowed quick experimentation with sensitivity and responsiveness.The ESP32 was selected because it integrates capacitive touch sensing and Bluetooth connectivity in a single board, reducing the need for additional components and simplifying the system. Capacitive touch sensing was used instead of mechanical switches to avoid moving parts, making the tiles thinner, quieter, and less prone to wear. Electrical tape and super glue were chosen for fastening as they are quick to apply, flexible, and sufficient for a prototype, unlike screws or permanent fixtures which would make iteration harder. Overall, the choices prioritized ease of fabrication, quick iteration, and reliable performance, allowing the project to be developed and refined efficiently within the given time.]`
 
 ## 12.3 Items to Purchase Separately
 
 | Item | Why Needed | Purchase Link | Latest Safe Date to Procure | Status |
 |---|---|---|---|---|
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
+| `[Aluminum Foil]` | `[conductive material for capacitive touch sensors]` | `[(https://www.zepto.com/pn/hindalco-fresh-wrapp-aluminium-foil-9-m/pvid/635e63a4-d665-4a28-b6b5-79da5bd6ad72)]` | `[10/04/2026]` | `[Received]` |
+| `[Electrical Tape]` | `[Secure components and prevent short circuits]` | `[(https://www.zepto.com/pn/abk-multicolour-high-performance-electric-insulation-tape-18-mm-x-6-m-pack-of-5/pvid/dddd3ab7-e7d3-4a94-b83a-959e91fd2bc0)]` | `[10/04/2026]` | `[Received]` |
+| `[Super Glue]` | `[Strong bonding for fixing layers and components]` | `[(https://www.zepto.com/pn/fevikwik-gel-instant-glue-for-repair-no-spillage-clear-non-drip-formula-extra-repair-time/pvid/067d5ac6-1335-4658-9b2d-c866b7ec515b)]` | `[10/04/2026]` | `[Received]` |
+| `[A3 Paper]` | `[Layered ontop of aluminium for better gameplay]` | `[(https://www.amazon.in/Camel-140-Sketch-Book-Pages/dp/B0CZS143FV?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1WLX31ILRWLJY)]` | `[13/04/2026]` | `[ordered]` |
 
 ## 12.4 Budget Summary
 
 | Budget Item | Estimated Cost |
 |---|---:|
-| Electronics | `[Cost]` |
-| Mechanical parts | `[Cost]` |
-| Fabrication materials | `[Cost]` |
-| Purchased extras | `[Cost]` |
-| Contingency | `[Cost]` |
-| **Total** | `[Cost]` |
+| Electronics | `[0]` |
+| Mechanical parts | `[0]` |
+| Fabrication materials | `[464]` |
+| Purchased extras | `[100]` |
+| Contingency | `[50]` |
+| **Total** | `[614]` |
 
 ## 12.5 Budget Reflection
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-`[Write here]`
+`[Not Applicable]`
 
 ---
 
