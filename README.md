@@ -628,10 +628,10 @@ Expected outcomes:
 
 | Week | Planned Goal | What Actually Happened | What Changed | Next Steps |
 |---|---|---|---|---|
-| Week 1 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 1 | `[Finalize concept and basic system plan]` | `[Decided on floor-based Piano Tiles controller and mapped keys to tiles]` | `[Needed to simplify interaction to 4 tiles for reliability]` | `[Create initial prototype and gather materials]` |
+| Week 2 | `[Build structure and test basic electronics]` | `[Built plywood base and tested ESP32 touch inputs]` | `[Touch sensing was inconsistent, required calibration]` | `[Improve sensor reliability and begin coding]` |
+| Week 3 | `[Develop code and integrate system]` | `[Completed basic code and connected tiles to laptop via Bluetooth]` | `[Encountered delay and false trigger issues]` | `[Optimize code and refine tile construction]` |
+| Week 4 | `[Playtest and refine system]` | `[Conducted multiple playtests and improved responsiveness and layout]` | `[Realized gameplay comfort and balance were important factors]` | `[Final refinements, documentation, and presentation]` |
 
 ---
 
