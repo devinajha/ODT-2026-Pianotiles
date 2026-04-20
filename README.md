@@ -248,10 +248,10 @@ Add a sketch with labels showing:
 
 | Dimension | Value |
 |---|---|
-| Length | `[Write here]` |
-| Width | `[Write here]` |
-| Height | `[Write here]` |
-| Estimated weight | `[Write here]` |
+| Length | `[30 inches]` |
+| Width | `[11 inches]` |
+| Height | `[3 inches]` |
+| Estimated weight | `[1-2kgs]` |
 
 ---
 
@@ -726,7 +726,7 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
-`[Write here]`
+`[The team worked well in collaboratively building and testing the prototype, with tasks divided between fabrication, wiring, and coding. Communication was consistent during hands-on work, which helped in quickly identifying and fixing issues. However, progress was sometimes slowed down by trial-and-error, especially while figuring out the most reliable way to construct the touch pads and calibrate sensitivity. Time management was generally effective during building phases, but more structured planning earlier on could have reduced repeated iterations. Overall, responsibilities were shared fairly, and the team adapted well to challenges as they arose.]`
 
 ## 19.2 Technical Reflection
 What did you learn about:
@@ -737,7 +737,7 @@ What did you learn about:
 - integration?
 
 **Response:**  
-`[Write here]`
+`[Through this project, we learned how capacitive touch sensing works in practice and how material choices and layering directly affect input reliability. In coding, we gained experience in mapping sensor inputs to keyboard outputs and optimizing responsiveness by adjusting thresholds and delays. Mechanically, we understood how small construction details, such as spacing and pressure distribution, influence performance. In terms of fabrication, we learned the importance of precision and durability when building interactive systems. Integration was a key learning area, as combining hardware, software, and physical interaction required constant testing and adjustment to ensure all components worked seamlessly together.]`
 
 ## 19.3 Design Reflection
 What did you learn about:
@@ -749,25 +749,25 @@ What did you learn about:
 - iteration?
 
 **Response:**  
-`[Write here]`
+`[This project highlighted the importance of designing for play by focusing on engagement and physical interaction rather than just functionality. We learned that delight comes from the novelty of movement-based gameplay, but it must be supported by clarity in how the system works. Clear mapping between tiles and inputs was essential for player understanding, especially for first-time users. Iteration played a major role in improving the experience, as repeated testing revealed issues with balance, responsiveness, and usability. Overall, the project reinforced that good interaction design must consider both the physical and cognitive experience of the user.]`
 
 ## 19.4 If You Had One More Week
 What would you improve next?
 
 **Response:**  
-`[Write here]`
+`[With an additional week, we would focus on refining the build quality and user experience. This would include making the tiles more durable and consistent, improving sensitivity calibration across all inputs, and enhancing the overall finish of the board. We also struggled with sourcing LED strips, and would have liked to add LED strips that react to the touch sensors and flash multicoloured lights during the gameplay.]`
 
 ---
 
 # 20. Final Submission Checklist
 
 Before submission, confirm that:
-- [ ] Team details are complete
-- [ ] Project description is complete
-- [ ] Inspiration sources are included
-- [ ] Player journey is written
-- [ ] Sketches are added
-- [ ] BOM is complete
+- [✓ ] Team details are complete
+- [ ✓] Project description is complete
+- [✓ ] Inspiration sources are included
+- [ ✓] Player journey is written
+- [✓ ] Sketches are added
+- [✓ ] BOM is complete
 - [ ] Purchase list is complete
 - [ ] Budget summary is complete
 - [ ] Mechanical planning is documented if applicable
