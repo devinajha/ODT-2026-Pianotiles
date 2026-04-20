@@ -601,16 +601,18 @@ Expected outcomes:
 
 | Risk | Type | Likelihood | Impact | Mitigation Plan | Owner |
 |---|---|---|---|---|---|
-| `[Example: Bluetooth disconnects]` | `Technical` | `Medium` | `High` | `[Fallback interaction / simplify connection flow]` | `[Name]` |
-| `[Example: Structure breaks during play]` | `Mechanical` | `Medium` | `High` | `[Reinforce joints / change material]` | `[Name]` |
-| `[Risk]` | `[Technical / Material / Time / Gameplay]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
-| `[Risk]` | `[Type]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
+| `[EBluetooth disconnects]` | `Technical` | `Medium` | `High` | `[Reconnect logic + test before each session]` | `[Mishka]` |
+| `[Structure breaks during play]` | `Mechanical` | `Low` | `High` | `[Reinforce base with wooden supports]` | `[Devina]` |
+| `[Inconsistent touch sensitivity]` | `[Technical]` | `[Medium]` | `[High]` | `[Calibrate thresholds for each tile]` | `[Mishka]` |
+| `[Wires disconnect during gameplay]` | `[Mechanical]` | `[Medium]` | `[High]` | `[Secure wiring with tape/glue]` | `[Mishka]` |
+| `[Mismatch of tile selection and gampelay result]` | `[Gameplay]` | `[Low]` | `[Medium]` | `[Adjust tile spacing and layout]` | `[Devina]` |
+
 
 ## 15.2 Biggest Unknown Right Now
 What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
-`[Write here]`
+`The biggest uncertainty at this stage is the **consistency and reliability of the touch input during real gameplay conditions**. While the system works in controlled testing, factors like different stepping pressure, player movement, and material wear can cause missed or false inputs. Ensuring that each tile responds accurately and consistently across different users and speeds remains the key challenge.`
 
 ---
 
