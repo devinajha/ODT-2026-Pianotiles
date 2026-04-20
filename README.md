@@ -521,32 +521,35 @@ Include:
 - how documentation will be maintained.
 
 **Response:**  
-`[Write here]`
+`The team divided tasks based on individual strengths to work efficiently. Mishka focused on coding, electronics, and debugging, including sensor calibration and Bluetooth communication. Devina handled fabrication and mechanical aspects, such as building the board, assembling the tiles, and refining the physical layout. Both members collaborated on troubleshooting and testing, especially where hardware and software overlapped.
+Decisions were made collaboratively through discussion and quick testing. Instead of long planning phases, the team relied on building and testing small changes, then choosing the option that performed best in practice. Progress was checked regularly through testing sessions after each build or code update. Each iteration was evaluated based on responsiveness, usability, and stability, ensuring continuous improvement.
+Documentation was maintained alongside the process. Key changes, test results, and issues were recorded after each session, including version updates and debugging logs. This ensured that progress was tracked clearly and decisions could be justified in the final report.
+`
 
 ## 13.2 Task Breakdown
 
 | Task ID | Task | Owner | Estimated Hours | Deadline | Dependency | Status |
 |---|---|---|---:|---|---|---|
-| T1 | `[Finalize concept]` | `[Name]` | `2` | `[Date]` | `None` | `To Do` |
-| T2 | `[Complete BOM]` | `[Name]` | `1` | `[Date]` | `T1` | `To Do` |
-| T3 | `[Test electronics]` | `[Name]` | `2` | `[Date]` | `T1` | `To Do` |
-| T4 | `[Build structure]` | `[Name]` | `4` | `[Date]` | `T1` | `To Do` |
-| T5 | `[Write control code]` | `[Name]` | `4` | `[Date]` | `T3` | `To Do` |
-| T6 | `[Integrate system]` | `[Name]` | `4` | `[Date]` | `T4, T5` | `To Do` |
-| T7 | `[Playtest]` | `[Name]` | `2` | `[Date]` | `T6` | `To Do` |
-| T8 | `[Refine and document]` | `[Name]` | `3` | `[Date]` | `T7` | `To Do` |
+| T1 | `[Finalize concept]` | `[Mishka + Devina]` | `2` | `[30/03/2026]` | `None` | `Done` |
+| T2 | `[Complete BOM]` | `[Devina]` | `1` | `[06/04/2026]` | `T1` | `Done` |
+| T3 | `[Test electronics]` | `[Mishka]` | `2` | `[10/04/2026]` | `T1` | `Done` |
+| T4 | `[Build structure]` | `[Devina]` | `1` | `[10/04/2026]` | `T1` | `Done` |
+| T5 | `[Write control code]` | `[Mishka]` | `2` | `[12/04/2026]` | `T3` | `Done` |
+| T6 | `[Integrate system]` | `[Mishka]` | `2` | `[15/04/2026]` | `T4, T5` | `Done` |
+| T7 | `[Playtest]` | `[Mishka + Devina]` | `2` | `[17/04/2026]` | `T6` | `Done` |
+| T8 | `[Refine and document]` | `[Mishka + Devina]` | `4` | `[20/04/2026]` | `T7` | `Done` |
 
 ## 13.3 Responsibility Split
 
 | Area | Main Owner | Support Owner |
 |---|---|---|
-| Concept and gameplay | `[Name]` | `[Name]` |
-| Electronics | `[Name]` | `[Name]` |
-| Coding | `[Name]` | `[Name]` |
-| App | `[Name]` | `[Name]` |
-| Mechanical build | `[Name]` | `[Name]` |
-| Testing | `[Name]` | `[Name]` |
-| Documentation | `[Name]` | `[Name]` |
+| Concept and gameplay | `[Devina + Mishka]` | `[None]` |
+| Electronics | `[Mishka]` | `[Devina]` |
+| Coding | `[Mishka ]` | `[Devina]` |
+| App | `[Mishka]` | `[Devina]` |
+| Mechanical build | `[Devina]` | `[Mishka]` |
+| Testing | `[Devina+ Mishka]` | `[None]` |
+| Documentation | `[Devina]` | `[Mishka]` |
 
 ---
 
