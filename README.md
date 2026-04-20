@@ -533,7 +533,7 @@ Documentation was maintained alongside the process. Key changes, test results, a
 | T1 | `[Finalize concept]` | `[Mishka + Devina]` | `2` | `[30/03/2026]` | `None` | `Done` |
 | T2 | `[Complete BOM]` | `[Devina]` | `1` | `[06/04/2026]` | `T1` | `Done` |
 | T3 | `[Test electronics]` | `[Mishka]` | `2` | `[10/04/2026]` | `T1` | `Done` |
-| T4 | `[Build structure]` | `[Devina]` | `1` | `[10/04/2026]` | `T1` | `Done` |
+| T4 | `[Build structure]` | `[Devina]` | `3` | `[10/04/2026]` | `T1` | `Done` |
 | T5 | `[Write control code]` | `[Mishka]` | `2` | `[12/04/2026]` | `T3` | `Done` |
 | T6 | `[Integrate system]` | `[Mishka]` | `2` | `[15/04/2026]` | `T4, T5` | `Done` |
 | T7 | `[Playtest]` | `[Mishka + Devina]` | `2` | `[17/04/2026]` | `T6` | `Done` |
