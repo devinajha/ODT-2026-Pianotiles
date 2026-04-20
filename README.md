@@ -662,9 +662,7 @@ Include:
 - revisions.
 
 **Response:**  
-`The project was built as a full-scale interactive floor controller using simple materials, iterative prototyping, and embedded electronics.
-
-The keyboard was built from a 25 by 10 inch plywood board, with 4 strips of wood fastened on the perimeter of the board, and one running along the center to ensure stability. The board was then seperated into 4 equal sections and sluminum foil sheets for each sensor pad were cut into equal-sized squares to maintain consistent input areas. Each sheet was`
+`[The project was built as a full-scale interactive floor controller using simple materials, iterative prototyping, and embedded electronics. The keyboard structure was constructed from a 30 × 11 inch plywood board, reinforced with four wooden strips fastened along the perimeter and an additional central strip to improve stability during use. The surface was then divided into four equal sections, and aluminum foil sheets measuring 6 × 10 inches were cut to form consistent sensor pads. Each tile was assembled by layering a base conductive foil layer, a secondary foil layer, and a top contact layer made of paper, carefully aligned to ensure reliable triggering when stepped on. These tiles were arranged linearly on the board to correspond with the game inputs. Components were secured using electrical tape and super glue to maintain durability under repeated use. Each tile was wired to a capacitive touch pin on the ESP32 using jumper wires, with a common ground established where necessary. The microcontroller was programmed to convert each tile input into keyboard signals (F, G, H, L), enabling seamless interaction with the Piano Tiles game on a laptop via Bluetooth. The system was refined through multiple iterations based on testing, including adjustments to sensitivity in code to reduce false or missed inputs, modifications to tile spacing and layout for improved balance and comfort, and reinforcement of wiring after initial failures during active gameplay.]`
 
 ## 17.2 Build Photos
 Add photos throughout the project.
@@ -688,9 +686,9 @@ Example:
 
 | Version | Date | What Changed | Why |
 |---|---|---|---|
-| `v1` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v2` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v3` | `[Date]` | `[Describe]` | `[Reason]` |
+| `v1` | `[10/04/2026]` | `[Built initial prototype using plywood base, foil touch sensors, and basic ESP32 input mapping]` | `[To test core concept of controlling Piano Tiles using foot interaction]` |
+| `v2` | `[Date]` | `[Adjusted touch sensitivity and improved wiring stability,]` | `[Initial testing showed missed inputs, false triggers, and confusion about tile mapping]` |
+| `v3` | `[Date]` | `[Added secondary paper layer with aluminium foil for better responsiveness, modified tile spacing, and optimized code for reduced delay]` | `[To improve gameplay comfort, reduce input lag, and make interaction more reliable during fast sequences]` |
 
 ---
 
