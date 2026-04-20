@@ -207,7 +207,7 @@ Include:
 - app interaction if any.
 
 **Response:**  
-`[Write here]`
+`The system works by using four floor tiles as input, where stepping on a tile is detected through aluminum foil acting as a capacitive touch sensor. These signals are sent to an ESP32 microcontroller, which processes the input by comparing it to baseline values to determine whether a tile has been pressed or released, while also filtering out noise and accidental triggers. Once a valid input is identified, the ESP32 sends a corresponding keyboard signal (F, G, H, or J) via Bluetooth to a connected laptop. Physically, the setup is built on a reinforced plywood board divided into four sections, with each tile made from layered foil and separator materials to ensure reliable detection. The system interacts with the Piano Tiles game by functioning as a Bluetooth keyboard, allowing players to control the game through physical movement instead of traditional touch input.`
 
 ## 6.3 Input / Output Map
 
