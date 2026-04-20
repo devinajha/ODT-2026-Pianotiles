@@ -1,7 +1,7 @@
 # 1. Team Identity
 
 ## 1.1 Studio / Group Name
-`[Enter your group name]`
+`Magic Tiles`
 
 ## 1.2 Team Members
 
